@@ -109,21 +109,20 @@ export const ShowList: React.FC = () => {
               <li key={todo.id} className="w-[90%] h-[50px] mb-5 relative flex justify-start items-center">
 
                 <NotCompletedDesign className="absolute left-0 w-[90%] h-auto z-0 object-cover" />
-                {/* 상태 전환 버튼 */}
+                <span className="absolute left-0 z-10 w-[100%] h-auto text-center" >{todo.name}</span>
+
+                {/* 버튼, 링크 */}
+                <div className='absolute inset-0  w-full h-full flex flex-row justify-between'>
                 <button
                   onClick={() => toggleCompletion(todo.id)}
-                  className="absolute left-0 z-50 rounded w-[20%] h-full"
-                  
-                >
-                </button>
-
-                {/* 목록 (누르면 해당 링크로 이동) */}
-                <Link 
-                  href={`/items/${todo.id}`}  // 동적 URL로 링크
-                  className="absolute left-7 w-[70%] h-full z-50"  // 텍스트 영역 위에 링크가 겹치도록  
-                >
-                </Link>
-                <span className="absolute left-0 z-10 w-[100%] h-auto text-center" >{todo.name}</span>               
+                  className="z-100 rounded w-[15%] h-full"
+                />
+                <Link
+                  href={`/items/${todo.id}`} 
+                  className="w-[80%] h-full z-50"
+                />
+                </div>
+            
               </li>
             ))}
           </ul>
@@ -148,15 +147,20 @@ export const ShowList: React.FC = () => {
             {completedTodos.map((todo) => (
               <li key={todo.id} className="w-[90%] h-[50px] mb-5 relative flex justify-start items-center">
                 <CompletedDesign className="absolute left-0 w-[90%] h-auto z-0 object-cover" />
+                <span className="absolute left-0 z-10 w-[100%] h-auto text-center">{todo.name}</span>
+
+                {/* 버튼, 링크 */}
+                <div className='absolute inset-0  w-full h-full flex flex-row justify-between'>
                 <button
                   onClick={() => toggleCompletion(todo.id)}
-                  className="absolute left-0 z-50 rounded w-[20%] h-full"
+                  className="z-100 rounded w-[15%] h-full"
                 />
                 <Link
                   href={`/items/${todo.id}`} 
-                  className="absolute left-7 w-[70%] h-full z-50"
+                  className="w-[80%] h-full z-50"
                 />
-                <span className="absolute left-0 z-10 w-[100%] h-auto text-center">{todo.name}</span>
+
+                </div>
               </li>
             ))}
           </ul>
