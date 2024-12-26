@@ -122,7 +122,6 @@ const ItemDetail: React.FC = () => {
   return (
     
     <div className="container max-w-[1920px] mx-auto min-h-screen flex justify-center">
-      <p>테스트</p>
       <div className="body responsive-padding flex flex-col items-center w-full max-w-[1250px] min-h-screen relative"> {/* body가 전체의 중앙을 차지할 수 있도록 함. 최대 1250px */}
 
       <div className="top w-full h-[70px] flex flex-row justify-center relative">
