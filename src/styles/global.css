@@ -1,0 +1,157 @@
+
+.footer{ /* 기본 중앙 정렬 */
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+@media (min-width: 770px) {
+   /* 라지부터 오른쪽 정렬 */
+  .footer{
+    justify-content: end;
+  }
+}
+
+.top-work{
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.WorkTitle{
+
+font-family: 'NanumSquare';
+font-style: normal;
+font-weight: 700;
+font-size: clamp(1rem, 5vw, 3rem);
+text-align: center;
+
+
+/* slate/900 */
+color: #0F172A;
+
+}
+
+ /* main 기본: 세로 정렬 */
+ .main{
+  background-color: white;
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+  
+}
+
+.imgMain{
+
+  width: 100%;
+  height: 500px;  /* 부모의 높이에 맞춰 50% 크기 */
+  flex-grow: 1; /* imgBody가 공간을 차지하도록 설정 */
+  padding: 3%;
+
+}
+.memoMain{
+
+  width: 100%;
+  height: 500px;
+  flex-grow: 1; /* imgBody가 공간을 차지하도록 설정 */
+  padding: 3%;
+
+}
+
+@media (min-width: 770px) {
+  /* lg 이상: 가로 정렬 */
+  .main {
+    flex-direction: row;
+  }
+  .imgMain{
+    width: 40%;
+    height: 500px;
+
+  }
+
+  .memoMain{
+    width:60%;
+    height: 500px;
+  }
+}
+
+
+
+
+
+.txt{
+  font-family: 'NanumSquare';
+  font-style: normal; 
+}
+.responsive-padding {
+    padding: 10%;
+
+  }
+  
+  @media (min-width: 640px) {
+    .responsive-padding {
+      padding: 5%; /* sm 이상 */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .responsive-padding {
+      padding: 2%; /* lg 이상 */
+    }
+  }
+
+
+
+
+
+  /* Content 기본: 세로 정렬 */
+  .content{
+    display: flex;
+    flex-direction: column; 
+    
+    
+  }
+
+  .contentBody{
+    border-width: 1px;
+    width: 100%;
+    height: 50%;
+    padding: 3%;
+  }
+
+
+  @media (min-width: 770px) {
+    /* lg 이상: 가로 정렬 */
+    .content {
+      flex-direction: row;
+    }
+    .contentBody{
+      width: 50%;
+      height: auto;
+
+    }
+  }
+
+  .basicText{
+width: 240px;
+text-align: center;
+font-family: 'NanumSquare';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+
+/* slate/400 */
+color: #94A3B8;
+
+
+  }
+
+  .eachList{
+    width: 100%;
+  }
+
+ 
